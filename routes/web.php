@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('Employee',[EmployeeController::class, 'index']);
 Route::post('Employee',[EmployeeController::class, 'store'])->name("store_data");
 Route::get('/fetch-employee',[EmployeeController::class, 'fetch_employee'])->name("fetch");
+Route::get('/edit-employee/{id}',[EmployeeController::class, 'edit_employee'])->name("edit");
+Route::post('/update-employee/{id}',[EmployeeController::class, 'update'])->name("update");
